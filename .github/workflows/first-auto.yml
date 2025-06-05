@@ -1,9 +1,7 @@
-﻿name: Build and Deploy to IIS via FTP
+﻿name: "Build and Deploy to IIS via FTP"
 
 on:
   push:
-    branches:
-      - main
   workflow_dispatch:       # 可手動執行
 
 jobs:
