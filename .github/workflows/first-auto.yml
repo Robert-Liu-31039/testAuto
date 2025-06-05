@@ -30,12 +30,4 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release -o ./publish
 
-    - name: Deploy to IIS via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./publish/
-        server-dir: /hrpm/
-        dangerous-clean-slate: true  # ⚠️ 若要清空並重新上傳，請小心使用
+    
