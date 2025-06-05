@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:       # 可手動執行
+  workflow_dispatch:  # ✅ 支援手動執行
 
 jobs:
   build:
