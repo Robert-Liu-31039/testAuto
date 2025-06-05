@@ -35,10 +35,10 @@ jobs:
     - name: Compress publish folder into zip
       run: |
         cd publish
-        Compress-Archive -Path * -DestinationPath ../hrpm_publish.zip
+        Compress-Archive -Path * -DestinationPath ../test-auto_publish.zip
 
     - name: Upload zip as artifact
       uses: actions/upload-artifact@v4
       with:
         name: test-auto-zip
-        path: ../test-auto_publish.zip
+        path: ./test-auto_publish.zip
