@@ -33,7 +33,7 @@ jobs:
       run: dotnet publish ./testAuto.csproj --no-build -c Release -o ./publish
 
     - name: Compress publish folder into zip
-      run: Compress-Archive -Path ./publish/* -DestinationPath ./test-auto_publish.zip
+      run: Compress-Archive -Path ./publish/* -DestinationPath ../test-auto_publish.zip
 
     - name: Upload zip as artifact
       uses: actions/upload-artifact@v4
